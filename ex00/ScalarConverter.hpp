@@ -32,16 +32,6 @@ class ScalarConverter {
 
     public:
         static void convert(const std::string &str);
-
-        class ImpossibleException : public std::exception {
-        public:
-            const char *what() const throw();
-        };
-
-        class NonDisplayableException : public std::exception {
-        public:
-            const char *what() const throw();
-        };
 };
 
 #endif //EX00_SCALARCONVERTER_HPP

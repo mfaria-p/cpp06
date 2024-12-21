@@ -32,7 +32,6 @@ static bool ft_isprint(char c) {
 // If no conversion can be performed, std::strtod() returns zero and sets the pointer pointed to by endptr to point to the input string.
 // If the correct value is outside the range of representable values, std::strtod() returns either HUGE_VAL or -HUGE_VAL (according to the sign of the value), and sets errno to ERANGE.
 // If the correct value would cause underflow, std::strtod() returns zero and sets errno to ERANGE.
-// If the correct value would cause overflow, std::strtod() returns either HUGE_VAL or -HUGE_VAL (according to the sign of the value), and sets errno to ERANGE.
 
 static ConversionType getConversionType(const std::string &str) {
     if (str == "-inff" || str == "+inff" || str == "nanf") {
@@ -67,6 +66,8 @@ static ConversionType getConversionType(const std::string &str) {
     }
 }
 
+//static_cast is used for conversions that are not implicit and would typically require a C-style cast to be performed.
+//static_cast is used for compile-time type conversions and is safer than C-style casts because it provides better type checking.
 static void printChar(std::string str) 
 {
     char c;
