@@ -25,7 +25,7 @@ static bool ft_isprint(char c) {
 }
 
 //std::strtod() converts the string to a floating point number (of type double).
-// std::strtod() skips all leading whitespaces, then takes an optional sign, followed by a sequence of digits optionally containing a decimal-point character, optionally followed by an exponent part (an e or E character followed by an optional sign and a sequence of digits).
+// std::strtod() skips all leading whitespaces, then takes an optional sign, followed by a sequence of digits optionally containing a decimal-point character
 // std::strtod() stops reading the input string at the first character that it cannot recognize as part of a number.
 // std::strtod() returns the converted floating point number as a value of type double.
 // std::strtod() also sets the pointer pointed to by endptr to point to the first character after the number in the input string.

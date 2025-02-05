@@ -2,12 +2,14 @@
 #include "B.hpp"
 #include "C.hpp"
 #include "Base.hpp"
+#include <ctime>
 
 Base::~Base() {
     std::cout << "Base Destructor called" << std::endl;
 }
 
 Base * generate(void) {
+    std::srand((std::time(0)));
     int random = rand() % 3;
     if (random == 0) {
         return new A;

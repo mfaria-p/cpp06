@@ -3,7 +3,6 @@
 #include "C.hpp"
 #include "Base.hpp"
 #include <cstdlib>
-#include <ctime>
 
 // Function prototypes
 Base* generate(void);
@@ -11,9 +10,6 @@ void identify(Base* p);
 void identify(Base& p);
 
 int main() {
-    // Seed the random number generator
-    std::srand(static_cast<unsigned int>(std::time(0)));
-
     // Generate a random instance of A, B, or C
     Base* base = generate();
 
